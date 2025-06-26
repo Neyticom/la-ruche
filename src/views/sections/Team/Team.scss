@@ -1,0 +1,173 @@
+@import url('https://fonts.googleapis.com/css2?family=Geist:wght@100..900&display=swap');
+.team {
+     color: black;
+    text-align: center;
+    font-size: 1em;
+    font-family: Geist;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 2em;
+    padding-inline: 1em;
+}
+.team__maintitle {
+    font-size: 1.2em;
+    margin-bottom: 0.5em;
+}
+.team__subtitle {
+    font-weight: 400;
+    font-size: 1em;
+}
+.team__box {
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+}
+.team__box-people {
+    display: flex;
+    flex-direction: column;
+    gap: 0.2em;
+    max-width: 23em;
+    
+}
+.team__box-people-image {
+    width: 3em;
+    margin-inline: auto;
+}
+.team__box-people-role {
+    color: #ee7f2b;
+    text-transform: uppercase;
+    font-size: 0.7em;
+    font-weight: 500;
+    margin-bottom: 0.6em;
+}
+.team__box-people-name {
+    font-size: 1em;
+    font-weight: 500;
+}
+.team__box-people-description {
+    font-weight: 400;
+    font-size: 0.8em;
+}
+.team__promesse {
+    font-size: 0.8em;
+}
+@media (min-width: 350px) {
+    .team__maintitle {
+        font-size: 1.4em;
+    }
+    .team__subtitle {
+        font-size: 1.2em;
+    }
+    .team__box-people-role {
+    font-size: 0.8em;
+    }
+    .team__box-people-name {
+        font-size: 1.1em;
+    }
+    .team__box-people-description {
+        font-size: 0.9em;
+    }
+    .team__promesse {
+    font-size: 0.9em;
+    }
+}
+@media (min-width: 576px) { // Smartphones
+
+}
+@media (min-width: 767px) { // Tablets
+    .team__box {
+        display: flex;
+        flex-direction: row;
+        gap: 1em;
+    }
+    .team {
+        padding-inline: 6em;
+        gap: 3em;
+    }
+    .team__promesse {
+        font-size: 1em;
+    }
+}
+@media (min-width: 992px) { // Laptops
+    .team__maintitle {
+        font-size: 1.6em;
+    }
+    .team__subtitle {
+        font-size: 1.4em;
+    }
+    .team__box {
+        gap: 3em;
+    }
+    .team__box-people-image {
+        width: 4em;
+    }
+}
+@media (min-width: 1200px) { // Desktops
+    .team__maintitle {
+        font-size: 1.8em;
+    }
+    .team__subtitle {
+        font-size: 1.6em;
+    }
+        .team__box-people-image {
+        width: 5em;
+    }
+}
+@media (min-width: 1400px) { // Monitors
+    .team {
+        font-size: 1em;
+        gap: 4em;
+        padding-inline: 10em;
+    }
+    .team__maintitle {
+        font-size: 2em;
+        margin-bottom: 0.5em;
+    }
+    .team__subtitle {
+        font-weight: 400;
+        font-size: 1.2em;
+    }
+    .team__box {
+        gap: 9em;
+    }
+    .team__box-people {
+        gap: 0.2em;
+        max-width: 23em;
+        
+    }
+    .team__box-people-image {
+        width: 6em;
+        margin-inline: auto;
+    }
+    .team__box-people-role {
+        font-size: 1.2em;
+        font-weight: 500;
+        margin-bottom: 0.6em;
+    }
+    .team__box-people-name {
+        font-size: 1.5em;
+        font-weight: 500;
+    }
+    .team__box-people-description {
+        font-weight: 200;
+        font-size: 1.1em;
+    }
+    .team__promesse {
+        font-size: 1.1em;
+    }
+}
+
+// @media (min-width: 350px) {
+// }
+// @media (min-width: 576px) { // Smartphones
+// }
+// @media (min-width: 767px) { // Tablets
+// }
+// @media (min-width: 992px) { // Laptops
+// }
+// @media (min-width: 1200px) { // Desktops
+// }
+// @media (min-width: 1400px) { // Monitors
+// }

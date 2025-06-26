@@ -1,0 +1,150 @@
+.header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-block: 1.4em;
+}
+
+.header--navigating {
+    box-shadow: 0 1px 10px #00000018;
+}
+
+.header__logo {
+    width: 2.6em;
+}
+
+.header__logo-link {
+    display: flex;
+    gap: 0.6em;
+    align-items: center;
+    justify-content: center;
+}
+
+.header__logo-title {
+    font-size: 1.1em;
+}
+
+@media (min-width: 350px) {
+    .header {
+        padding-block: 1.6em;
+    }
+}
+@media (min-width: 576px) { // Smartphones
+    .header {
+        padding-block: 1.8em;
+    }
+    .header__logo {
+        width: 2.8em;
+    }
+    .header__logo-title {
+        font-size: 1.2em;
+    }
+}
+@media (min-width: 767px) { // Tablets
+    .header {
+        padding-inline: 2em;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .header-nav__list {
+        display: flex;
+        gap: 1.4em;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .header-nav__list-item {
+        font-weight: 500;
+        cursor: pointer;
+        &:hover {
+            color: #ffa600;
+        }
+    }
+
+    .header-nav__list-item--current {
+        font-weight: 800;
+        color: #ffa600;
+    }
+
+    .header-nav__list-item-link {
+        font-size: 0.85em;
+    }
+}
+@media (min-width: 850px) { // Additionnal
+    .header {
+        padding-inline: 3em;
+    }
+
+    .header-nav__list-item-link {
+        font-size: 0.9em;
+    }
+}
+@media (min-width: 992px) { // Laptops
+    .header {
+        padding-inline: 4em;
+        padding-block: 2em;
+    }
+
+    .header__logo-link {
+        gap: 0.8em;
+    }
+
+    .header__logo {
+        width: 3.2em;
+    }
+
+    .header__logo-title {
+        font-size: 1.4em;
+    }
+
+    .header-nav__list {
+        gap: 2em;
+    }
+
+    .header-nav__list-item-link {
+        font-size: 0.95em;
+    }
+}
+@media (min-width: 1200px) { // Desktops
+    .header {
+        padding-inline: 6em;
+    }
+
+    .header__logo-link {
+        gap: 1em;
+    }
+
+    .header__logo-title {
+        font-size: 1.5em;
+    }
+
+    .header-nav__list {
+        gap: 2.4em;
+    }
+
+    .header-nav__list-item-link {
+        font-size: 1em;
+    }
+}
+@media (min-width: 1400px) { // Monitors
+    .header {
+        padding-inline: 10em;
+    }
+
+    .header__logo {
+        width: 3.4em;
+    }
+
+    .header__logo-title {
+        font-size: 1.6em;
+    }
+
+    .header-nav__list {
+        gap: 3em;
+    }
+
+    .header-nav__list-item-link {
+        font-size: 1em;
+    }
+}

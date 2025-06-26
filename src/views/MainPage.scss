@@ -1,0 +1,18 @@
+.arrow {
+    padding: auto;
+}
+.button {
+    background-color: #EE7F2B;
+    border-radius: 4em;
+    width: 4em;
+    height: 4em;
+    border-block-end: 4px solid#EE6600 ;
+    &:hover{
+        background-color: #202020;
+        border-block-end: 4px solid#000000 ;
+        transition: ease-in-out 300ms;
+    }
+    position: fixed;
+    bottom: 4em;
+    right: 4em;
+}

@@ -1,0 +1,151 @@
+@import url('https://fonts.googleapis.com/css2?family=Geist:wght@100..900&display=swap');
+    .contact {
+        color: black;
+        text-align: center;
+        font-size: 1em;
+        font-family: Geist;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 1em;
+
+    }
+    .contact__form {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 1em;
+    }
+    .contact__maintitle {
+        font-size: 1.6em;
+        font-weight: 900;
+        text-transform: uppercase;
+    }
+    .contact__subtitle {
+        font-size: 0.8em;
+        color: #ee7f2b;
+        text-transform: uppercase;
+    }
+    .contact-form__informations-area {
+        display: flex;
+        gap: 1em;
+        flex-direction: column;
+        
+    }
+    .contact-form__user-informations {
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        gap: 1em;
+    
+    }
+    .contact-form__company-information {
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        gap: 1em;
+    }
+    .contact-form__input, .contact-form__textarea {
+        border: solid #000000 1px;
+        border-radius: 0.8em;
+    }
+
+    .contact-form__input {
+        text-align: center;
+        padding: 0.8em 1em;
+    }
+
+    .contact-form__textarea {
+        padding: 1em 1.4em;
+        width: 16em;
+        min-height: 8em;
+        font-family: Geist;
+        resize: none;
+        overflow: hidden;
+    }
+    .contact-form__submit-botton {
+        padding: 1.5em 3em;
+        border: none;
+        margin-bottom: 1em;
+        border-radius: 2em;
+        color: rgb(255, 255, 255);
+        background-color: #ee7f2b;
+        font-family: Geist;
+        text-transform: uppercase;
+        font-weight: 700;
+        border-block-end: 4px solid#EE6600 ;
+        &:hover{
+            background-color: #202020;
+            border-block-end: 4px solid#000000 ;
+            transition: ease-in-out 300ms;
+        }
+    }
+@media (min-width: 350px) {
+    .contact {
+        padding-inline: 2em;
+    }
+    .contact__maintitle {
+        font-size: 1.6em;
+    }
+    .contact__subtitle {
+        font-size: 1em;
+    }
+    .contact-form__input {
+        text-align: center;
+        padding: 0.8em 3em;
+    }
+    .contact-form__textarea {
+        padding: 1em 1.4em;
+        width: 20em;
+        min-height: 8em;
+
+    }
+}
+@media (min-width: 576px) { // Smartphones
+    .contact__subtitle {
+        margin-bottom: 1.4em;
+    }
+    .contact-form__textarea {
+        margin-bottom: 1em;
+    }
+}
+@media (min-width: 767px) { // Tablets
+    .contact-form__informations-area {
+        flex-direction: row;
+    }
+    .contact-form__textarea {
+        padding-left: 2em;
+        padding-top: 1.4em;
+        width: 30em;
+    }
+}
+@media (min-width: 992px) { // Laptops
+    .contact-form__submit-botton {
+        padding: 1.5em 4em;
+    }
+}
+@media (min-width: 1200px) { // Desktops
+    .contact-form__submit-botton {
+        padding: 1.5em 5em;
+    }
+    .contact-form__textarea {
+        width: 30em;
+    }
+}
+@media (min-width: 1400px) { // Monitors
+    .contact__maintitle {
+        font-size: 2em;
+        font-weight: 900;
+    }
+    .contact__subtitle {
+        font-size: 1.3em;
+    }
+    .contact-form__textarea {
+        width: 35em;
+    }
+    .contact-form__submit-botton {
+        padding: 1.5em 6em;
+    }
+}

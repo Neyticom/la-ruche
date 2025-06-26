@@ -1,0 +1,171 @@
+.trust {
+    background-color: #f5f5f5;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 3em;
+    padding-bottom: 5em;
+}
+
+.trust__titles {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5em;
+    align-items: center;
+    justify-content: center;
+}
+
+.trust__main-title {
+    font-size: 2em;
+    font-weight: 600;
+}
+
+.trust__subtitle {
+    font-size: 1.1em;
+    font-weight: 400;
+}
+
+.trust__content {
+    display: flex;
+    gap: 5em;
+    align-items: center;
+    justify-content: center;
+}
+
+.trust__items {
+    display: flex;
+    flex-direction: column;
+    gap: 1.4em;
+}
+
+.trust__item {
+    display: flex;
+    gap: 1em;
+}
+
+.trust-item__icon {
+    width: 1.5em;
+    align-self: flex-start;
+}
+
+.trust-item__text {
+    padding-top: 0.15em;
+    font-weight: 300;
+}
+
+.trust__item-key {
+    font-weight: 600;
+}
+
+.trust__example {
+    position: relative;
+}
+
+.trust-example__company {
+    background-color: white;
+    border-radius: 1.2em;
+    border: solid 1px #0000001A;
+    box-shadow: -10px 0 10px #00000005;
+    padding: 2em;
+    display: flex;
+    flex-direction: column;
+    gap: 2em;
+    padding-bottom: 4em;;
+    margin-bottom: 7.5em;
+    margin-left: 3em;
+}
+
+.trust-example__company-header {
+    display: flex;
+    align-items: center;
+}
+
+.trust-example__company-logo {
+    background-color: #EE7F2B;
+    width: 65px;
+    height: 65px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 0.8em;
+    margin-right: 1em;
+}
+
+.trust-example__company-letters {
+    color: white;
+    font-weight: 900;
+    font-size: 2.1em;
+}
+
+.trust-example__company-verified {
+    margin-left: auto;
+    width: 1.8em;
+    &:hover{
+        filter: brightness(0) saturate(100%) invert(54%) sepia(52%) saturate(796%) hue-rotate(341deg) brightness(98%) contrast(89%);
+    }
+}
+
+.trust-example__company-score {
+    display: flex;
+    align-items: center;
+    gap: 0.8em;
+    margin-left: 1em;
+}
+
+.trust-example__company-trusted {
+    width: 30px;
+}
+
+.trust-example__company-comments {
+    display: flex;
+    align-items: center;
+    gap: 0.8em;
+    margin-left: 1em;
+}
+
+.trust-example__company-comment {
+    width: 25px;
+}
+
+.trust-example__company-button {
+    background-color: white;
+    border: black solid 2px;
+    border-radius: 0.5em;
+    padding: 0.4em 1.5em;
+    font-weight: 500;
+    &:hover {
+        background-color: black;
+        color: white;
+    }
+}
+
+.trust-example__pro-review {
+    background-color: white;
+    border-radius: 1em;
+    border: solid 1px #0000001A;
+    box-shadow: -10px 0 10px #00000005;
+    padding: 1.2em 2em;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1em;
+    width: min-content;
+    text-wrap: nowrap;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+}
+
+.trust-example__pro-name {
+    font-weight: 500;
+    font-size: 1.1em;
+}
+
+.trust-example__pro-score {
+    height: 25px;
+}
+
+.trust-example__pro-comment {
+    font-size: 1.1em;
+}
