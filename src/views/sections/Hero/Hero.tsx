@@ -3,6 +3,7 @@ import Transition from '../../../assets/waves_transition.svg';
 import './Hero.scss';
 
 export default function Hero () {
+
     return (
         <main className="hero">
             <div className='hero__inner'>

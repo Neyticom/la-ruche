@@ -1,4 +1,4 @@
-.header {
+.header, .header--navigating {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -7,6 +7,15 @@
 
 .header--navigating {
     box-shadow: 0 1px 10px #00000018;
+    position: fixed;
+    top: 0;
+    z-index: 100;
+    width: 100%;
+    background-color: white;
+}
+
+.header__placeholder {
+    width: 100%;
 }
 
 .header__logo {
@@ -25,12 +34,12 @@
 }
 
 @media (min-width: 350px) {
-    .header {
+    .header, .header--navigating {
         padding-block: 1.6em;
     }
 }
 @media (min-width: 576px) { // Smartphones
-    .header {
+    .header, .header--navigating {
         padding-block: 1.8em;
     }
     .header__logo {
@@ -41,7 +50,7 @@
     }
 }
 @media (min-width: 767px) { // Tablets
-    .header {
+    .header, .header--navigating {
         padding-inline: 2em;
         justify-content: space-between;
         align-items: center;
@@ -72,7 +81,7 @@
     }
 }
 @media (min-width: 850px) { // Additionnal
-    .header {
+    .header, .header--navigating {
         padding-inline: 3em;
     }
 
@@ -81,7 +90,7 @@
     }
 }
 @media (min-width: 992px) { // Laptops
-    .header {
+    .header, .header--navigating {
         padding-inline: 4em;
         padding-block: 2em;
     }
@@ -107,7 +116,7 @@
     }
 }
 @media (min-width: 1200px) { // Desktops
-    .header {
+    .header, .header--navigating {
         padding-inline: 6em;
     }
 
@@ -128,7 +137,7 @@
     }
 }
 @media (min-width: 1400px) { // Monitors
-    .header {
+    .header, .header--navigating {
         padding-inline: 10em;
     }
 
