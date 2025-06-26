@@ -29,7 +29,6 @@
     display: flex;
     flex-direction: column;
     gap: 0.45em;
-    margin-bottom: 0.6em;
 }
 
 .primary__button, .secondary__button {
@@ -68,8 +67,9 @@
 
 .hero__transition {
     width: 150%;
-    transform: translateX(-25%);
-    bottom: 0;
+    transform: translateX(-25%) translateY(1.1em);
+    position: relative;
+    z-index: 1;
 }
 
 @media (min-width: 350px) {
@@ -88,7 +88,6 @@
 
     .hero-content__buttons {
         flex-direction: row;
-        margin-bottom: 0.8em;
     }
 
     .hero__illustration {
@@ -100,6 +99,10 @@
         padding: 0.75em 1.5em;
         font-size: 0.8em;
         text-wrap: nowrap;
+    }
+
+    .hero__transition {
+        transform: translateX(-25%) translateY(1.7em);
     }
 }
 @media (min-width: 576px) { // Smartphones
@@ -120,7 +123,6 @@
 
     .hero-content__buttons {
         gap: 1.4em;
-        margin-bottom: 1.6em;
     }
 
     .hero__illustration {
@@ -135,10 +137,9 @@
     }
 
     .hero__transition {
-    width: 130%;
-    transform: translateX(-15%);
-    bottom: 0;
-}
+        width: 130%;
+        transform: translateX(-15%) translateY(1.9em);
+    }
 
 }
 @media (min-width: 767px) { // Tablets
@@ -187,14 +188,13 @@
 
     .hero__transition {
         width: 100%;
-        transform: none;
+        transform: translateY(2.2em);
     }
-    
 }
 @media (min-width: 992px) { // Laptops
 
     .hero {
-        padding-block: 2em;
+        padding-top: 2em;
     }
 
     .hero__content {
@@ -222,10 +222,14 @@
     .hero__illustration {
         width: 25em;
     }
+
+    .hero__transition {
+        transform: translateY(2.6em);
+    }
 }
 @media (min-width: 1200px) { // Desktops
 
-    .hero__inner {
+    .hero {
         gap: 3em;
     }
 
@@ -254,10 +258,13 @@
         width: 28em;
     }
 
+    .hero__transition {
+        transform: translateY(2.9em);
+    }
 }
 @media (min-width: 1400px) { // Monitors
     .hero {
-        padding-block: 4em;
+        padding-top: 4em;
     }
 
     .hero__inner {
@@ -285,5 +292,9 @@
 
     .hero__illustration {
         width: 32em;
+    }
+
+    .hero__transition {
+        transform: translateY(5.6em);
     }
 }

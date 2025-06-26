@@ -1,11 +1,11 @@
 .benefits {
-    background-color: #ffa600;
-    color: #ffffff;
+
+    background-color: #F5F5F5;
     display: flex;
     justify-content: center;
     gap: 5em;
     align-items: center;
-    padding-block: 3em;
+    padding-top: 10em;
 }
 
 .benefits__app, .benefits__client {
@@ -15,8 +15,8 @@
 }
 
 .benefits__separator {
-    background-color: white;
-    width: 2px;
+    background-color: black;
+    width: 1px;
     height: 150px;
 }
 
@@ -28,6 +28,7 @@
 .benefits-item__icon {
     width: 50px;
     height: 50px;
+    filter: brightness(0) saturate(100%) invert(0%) sepia(0%) saturate(0%) hue-rotate(324deg) brightness(96%) contrast(104%);
 }
 
 .benefits-item__texts {
@@ -42,4 +43,17 @@
 
 .benefits-item__text {
     font-weight: 300;
+}
+
+@media (min-width: 350px) {
+}
+@media (min-width: 576px) { // Smartphones
+}
+@media (min-width: 767px) { // Tablets
+}
+@media (min-width: 992px) { // Laptops
+}
+@media (min-width: 1200px) { // Desktops
+}
+@media (min-width: 1400px) { // Monitors
 }

@@ -1,5 +1,4 @@
 import Header from "../layouts/Header/Header";
-import Benefits from "./sections/Benefits/Benefits";
 import Hero from "./sections/Hero/Hero";
 import Questions from "./sections/Questions/Questions"
 import Trust from "./sections/Trust/Trust";;
@@ -32,7 +31,6 @@ export default function MainPage() {
         <main>
             <Header />
             <Hero />
-            <Benefits />
             <Questions />
             <Trust />
             <Join />
