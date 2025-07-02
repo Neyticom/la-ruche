@@ -2,44 +2,55 @@
     position: relative;
     background-color: #F5F5F5;
     display: flex;
-    padding: 5em;
+    flex-direction: column;
     align-items: center;
     justify-content: center;
-    gap: 4em;
+    padding-block: 3em;
+    gap: 1em;
     &::after {
         content: "";
-        width: 80%;
+        width: 100%;
         height: 2px;
         background-color: #000000;
         position: absolute;
-        bottom: 5em;
+        bottom: 3em;
         left: 50%;
-        transform: translateX(-50%)
+        transform: translateX(-50%);
+        z-index: 1;
     }
 }
+
 .questions__content {
     display: flex;
     flex-direction: column;
-    gap: 1em;
+    gap: 0.8em;
+    padding-inline: 1.4em;
 }
 
 .questions-content__main-title {
-    font-size: 2.2em;
+    font-size: 1.2em;
+    margin-inline: auto;
 }
 
 .questions-content__text {
-    font-size: 1.3em;
+    font-size: 0.9em;
+    margin-inline: 1em;
+    margin-bottom: 0.6em;
+    br {
+        display: none;
+    }
 }
 
 .questions-content__tags {
     display: flex;
-    gap: 1em;
+    gap: 0.5em;
     flex-wrap: wrap;
+    justify-content: center;
 }
 
 .questions-content__tag, .questions-content__tag--current {
     border: #000000 solid 1px;
-    font-size: 1em;
+    font-size: 0.85em;
     background-color: #FFFFFF;
     border-radius: 0.4em;
     padding: 0.6em 1em;
@@ -59,74 +70,75 @@
 .questions__app {
     background-color: #FFFFFF;
     border: #c0c0c0 solid 1px;
-    border-radius: 0.8em;
+    border-radius: 0.7em;
     flex: 2;
-    padding-bottom: 1em;
-    max-width: 500px;
+    padding: 0.8em 1em;
     box-shadow: -10px 0 10px #00000005;
     border-bottom-left-radius: 0;
     border-bottom-right-radius: 0;
+    margin-inline: 0.4em;
 }
 
 .questions-app__header {
-    border-bottom: #c0c0c0 solid 1px;
-    padding-block: 2em;
-    padding-left: 3em;
+    display: none;
 }
 
 .questions-app__title {
     font-weight: 700;
-    font-size: 1.5em;
+    font-size: 1em;
 }
 
 .questions-app__stream, .questions-app__stream-a {
     display: flex;
     flex-direction: column;
-    gap: 0.5em;
-    margin: 1em 3em;
+    gap: 0.4em;
+    margin: 0.6em;
 }
 
 .questions-app__stream-a {
-    padding-left: 40px;
+    padding-left: 20px;
 }
 
 .questions-app__stream-a::before {
     border: solid 1px black;
-    border-bottom-left-radius: 0.5em;
+    border-bottom-left-radius: 0.4em;
     border-top: none;
     border-right: none;
-    width: 22px;
-    height: 32px;
+    width: 12px;
+    height: 18px;
     content: "";
     flex-shrink: 0;
     position: absolute;
-    transform: translateX(-40px);
+    transform: translateX(-20px);
 }
 
 .questions-app__user-profile {
     display: flex;
-    margin-top: 10px;
 }
 
 .questions-app__user-picture {
-    width: 34px;
+    width: 22px;
 }
 
 .questions-app__user-informations {
-    padding-left: 1em;
+    padding-left: 0.6em;
 }
 
 .questions-app__user-name {
-    font-weight: 700;
-    font-size: 1.2em;
+    font-weight: 600;
+    font-size: 0.85em;
 }
 
 .questions-app__user-job {
-    font-size: 0.9em;
+    font-size: 0.75em;
+}
+
+.questions-app__question-title {
+    font-size: 0.85em;
 }
 
 .questions-app__question-details {
-    font-size: 0.9em;
+    font-size: 0.8em;
 }
 
 .questions-app__message-footer {
@@ -136,22 +148,373 @@
 }
 
 .questions-app__message-date {
-    font-size: 0.9em;
+    font-size: 0.75em;
     color: #888888;
 }
 
 .questions-app__reply-button {
     background-color: transparent;
-    font-size: 0.9em;
+    font-size: 0.75em;
     
 
     &::before {
         content: "+ ";
-        font-size: 1.1em;
+        font-size: 1em;
     }
 
     &:hover {
         transform: scale(1.1);
         font-weight: 500;
     }
+}
+
+@media (min-width: 350px) {
+    .questions__content {
+        padding-inline: 2em;
+    }
+
+    .questions-content__main-title {
+        font-size: 1.3em;
+        margin-inline: 0;
+    }
+
+    .questions-content__text {
+        font-size: 0.95em;
+        margin-inline: 0;
+        margin-bottom: 0.4em;
+        br {
+            display: inline;
+        }
+    }
+
+    .questions-content__tags {
+        justify-content: flex-start;
+    }
+
+    .questions__app {
+        max-width: 25em;
+        padding: 0.8em 1.2em;
+        border-radius: 0.8em;
+        border-bottom-left-radius: 0;
+        border-bottom-right-radius: 0;
+    }
+
+    .questions-app__stream, .questions-app__stream-a {
+        margin-block: 1em;
+        gap: 0.5em;
+    }
+
+}
+@media (min-width: 576px) { // Smartphones
+
+    .questions {
+        padding-block: 3.6em;
+        &::after {
+            width: 90%;
+            bottom: 3.6em;
+        }
+        gap: 1.6em;
+    }
+
+    .questions__content {
+        padding-inline: 2.6em;
+    }
+
+    .questions-content__main-title {
+        font-size: 1.6em;
+    }
+
+    .questions-content__text {
+        font-size: 1.05em;
+    }
+
+    .questions-content__tag, .questions-content__tag--current {
+        font-size: 0.9em;
+    }
+
+    .questions__app {
+        padding: 0;
+        padding-bottom: 0.6em;
+        max-width: 28em;
+    }
+
+    .questions-app__header {
+        display: block;
+        border-bottom: #c0c0c0 solid 1px;
+        padding-block: 1.3em;
+        padding-left: 2.8em;
+    }
+
+    .questions-app__title {
+        font-size: 1.05em;
+    }
+
+    .questions-app__stream, .questions-app__stream-a {
+        margin: 1.2em 2em;
+    }
+
+    .questions-app__user-picture {
+        width: 26px;
+    }
+
+    .questions-app__user-name {
+        font-size: 0.95em;
+    }
+
+    .questions-app__user-job {
+        font-size: 0.85em;
+    }
+
+    .questions-app__question-title {
+        font-size: 0.95em;
+    }
+
+    .questions-app__question-details {
+        font-size: 0.85em;
+    }
+
+    .questions-app__message-date {
+        font-size: 0.8em;
+    }
+
+    .questions-app__reply-button {
+        font-size: 0.8em;
+        
+        &::before {
+            font-size: 1.1em;
+        }
+    }
+
+}
+@media (min-width: 767px) { // Tablets
+
+    .questions {
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+        gap: 1em;
+        padding: 3em 1.6em;
+        &::after {
+            width: 95%;
+            bottom: 3em;
+        }
+    }
+
+    .questions__content {
+        padding: 0;
+        max-width: 47%;
+    }
+
+    .questions-content__text {
+        font-size: 0.95em;
+        line-height: 1.3em;
+        margin-bottom: 0;
+    }
+
+    .questions-content__tags {
+        gap: 0.8em;
+    }
+
+    .questions-content__tag, .questions-content__tag--current {
+        font-size: 0.95em;
+    }
+
+    .questions__app {
+        max-width: 47%;
+    }
+
+}
+@media (min-width: 992px) { // Laptops
+
+    .questions {
+        gap: 3em;
+        padding: 6em 4em;
+        &::after {
+            width: 90%;
+            bottom: 6em;
+        }
+    }
+
+    .questions__content {
+        gap: 1em;
+    }
+
+    .questions-content__main-title {
+        font-size: 1.95em;
+    }
+
+    .questions-content__text {
+        font-size: 1.15em;
+    }
+
+    .questions-content__tags {
+        display: grid;
+        grid-template-columns: repeat(3, auto);
+    }
+
+    .questions__app {
+        max-width: 500px;
+    }
+
+    .questions-app__header {
+        padding-block: 1.6em;
+        padding-left: 3em;
+    }
+
+    .questions-app__title {
+        font-size: 1.15em;
+    }
+
+    .questions-app__stream, .questions-app__stream-a {
+        margin: 1.2em 2.2em;
+    }
+
+    .questions-app__user-picture {
+        width: 30px;
+    }
+
+    .questions-app__user-name {
+        font-size: 1em;
+        font-weight: 700;
+    }
+
+    .questions-app__user-job, .questions-app__question-details {
+        font-size: 0.9em;
+    }
+
+    .questions-app__question-title {
+        font-size: 1em;
+    }
+
+    .questions-app__message-date, .questions-app__reply-button {
+        font-size: 0.85em;
+    }
+
+}
+@media (min-width: 1200px) { // Desktops
+
+    .questions {
+        padding-block: 7em;
+        gap: 5em;
+        &::after {
+            width: 85%;
+            bottom: 7em;
+        }
+    }
+
+    .questions__content {
+        gap: 1.1em;
+    }
+
+    .questions-content__main-title {
+        font-size: 2.15em;
+    }
+
+     .questions-content__tag, .questions-content__tag--current {
+        font-size: 1em;
+    }
+
+    .questions-app__header {
+        padding-block: 1.8em;
+    }
+
+    .questions-app__title {
+        font-size: 1.3em;
+    }
+    
+    .questions-app__user-picture {
+        width: 32px;
+    }
+
+    .questions-app__user-name {
+        font-size: 1.1em;
+    }
+
+    .questions-app__user-job {
+        font-size: 0.95em;
+    }
+
+    .questions-app__message-date, .questions-app__reply-button {
+        font-size: 0.9em;
+    }
+
+}
+@media (min-width: 1400px) { // Monitors
+    .questions {
+        padding-block: 10em;
+        gap: 6em;
+        &::after {
+            width: 80%;
+            bottom: 10em;
+        }
+    }
+
+    .questions__content {
+        gap: 1.2em;
+    }
+
+    .questions-content__main-title {
+        font-size: 2.4em;
+    }
+
+    .questions-content__text {
+        font-size: 1.35em;
+    }
+
+    .questions-content__tag, .questions-content__tag--current {
+        font-size: 1.1em;
+    }
+
+    .questions__app {
+        padding-bottom: 1em;
+    }
+
+    .questions-app__title {
+        font-size: 1.5em;
+    }
+
+    .questions-app__stream, .questions-app__stream-a {
+        gap: 0.5em;
+        margin: 1em 3em;
+    }
+
+    .questions-app__stream-a {
+        padding-left: 40px;
+    }
+
+    .questions-app__stream-a::before {
+        border-bottom-left-radius: 0.5em;
+        width: 22px;
+        height: 32px;
+        transform: translateX(-40px);
+    }
+
+    .questions-app__user-profile {
+        margin-top: 10px;
+    }
+
+    .questions-app__user-picture {
+        width: 34px;
+    }
+
+    .questions-app__user-informations {
+        padding-left: 0.8em;
+    }
+
+    .questions-app__user-name {
+        font-size: 1.2em;
+    }
+
+    .questions-app__user-job {
+        font-size: 1em;
+    }
+
+    .questions-app__question-details {
+        font-size: 0.95em;
+    }
+
+    .questions-app__message-date {
+        font-size: 0.95em;
+    }
+
 }

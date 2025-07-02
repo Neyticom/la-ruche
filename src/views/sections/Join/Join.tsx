@@ -5,9 +5,9 @@ import './Join.scss';
 export default function Join() {
 
     const targets = [
-        { target: 0, label: "Première action menée", showTarget: false },
-        { target: 2000, label: "Seconde action menée", showTarget: true },
-        { target: 9000, label: "Seconde action menée", showTarget: true }
+        { target: 0, label: "Début des pré-inscriptions", showTarget: false },
+        { target: 2000, label: "Ouverture des accès aux bêta testeurs", showTarget: true },
+        { target: 9000, label: "Lancement de l'application", showTarget: true }
     ];
 
     const maxTarget = Math.max(...targets.map(t => t.target));
