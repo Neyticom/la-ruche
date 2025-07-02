@@ -225,7 +225,7 @@ export default function Questions() {
                         {answers.filter((answer) => answer.question_id === currentQuestion?.id).map((answer) => (
                             <article key={answer.id} className="questions-app__stream-a">
                                 <header className="questions-app__user-profile">
-                                    <img src={Member2} className="questions-app__user-picture"/>
+                                    <img src={answer.id&1 ? Member2 : Member3 } className="questions-app__user-picture"/>
                                     <div className="questions-app__user-informations">
                                         <p className="questions-app__user-name">{answer.author.name}</p>
                                         <p className="questions-app__user-job">{answer.author.jobTitle}</p>
