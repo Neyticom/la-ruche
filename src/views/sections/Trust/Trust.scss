@@ -4,15 +4,15 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    gap: 1.6em;
-    padding-bottom: 5em;
+    gap: 1.8em;
+    padding-block: 1em 4em;
     padding-inline: 0.4em;
 }
 
 .trust__titles {
     display: flex;
     flex-direction: column;
-    gap: 0.6em;
+    gap: 0.8em;
     align-items: center;
     justify-content: center;
     max-width: 80%;
@@ -32,7 +32,7 @@
 
 .trust__content {
     display: flex;
-    gap: 5em;
+    gap: 2em;
     align-items: center;
     justify-content: center;
     flex-direction: column;
@@ -74,40 +74,46 @@
     border-radius: 1.2em;
     border: solid 1px #0000001A;
     box-shadow: -10px 0 10px #00000005;
-    padding: 2em;
+    padding: 2em 1em;
     display: flex;
     flex-direction: column;
-    gap: 2em;
-    padding-bottom: 4em;;
-    margin-bottom: 7.5em;
-    margin-left: 3em;
+    gap: 1em;
+    padding-bottom: 3em;
+    margin-bottom: 6.4em;
 }
 
 .trust-example__company-header {
     display: flex;
     align-items: center;
+    gap: 0.6em;
 }
 
 .trust-example__company-logo {
     background-color: #EE7F2B;
-    width: 65px;
-    height: 65px;
+    width: 45px;
+    height: 45px;
     display: flex;
     justify-content: center;
     align-items: center;
-    border-radius: 0.8em;
-    margin-right: 1em;
+    border-radius: 0.6em;
 }
 
 .trust-example__company-letters {
     color: white;
     font-weight: 900;
-    font-size: 2.1em;
+    font-size: 1.3em;
+}
+
+.trust-example__company-name {
+    font-size: 0.9em;
+}
+
+.trust-example__company-domain {
+    font-size: 0.8em;
 }
 
 .trust-example__company-verified {
-    margin-left: auto;
-    width: 1.8em;
+    width: 1.2em;
     &:hover{
         filter: brightness(0) saturate(100%) invert(54%) sepia(52%) saturate(796%) hue-rotate(341deg) brightness(98%) contrast(89%);
     }
@@ -116,31 +122,41 @@
 .trust-example__company-score {
     display: flex;
     align-items: center;
-    gap: 0.8em;
-    margin-left: 1em;
+    gap: 0.6em;
+    margin-left: 0.55em;
+    text-wrap: nowrap; 
 }
 
 .trust-example__company-trusted {
-    width: 30px;
+    width: 25px;
+}
+
+.trust-example__company-interractions {
+    font-size: 0.8em;
 }
 
 .trust-example__company-comments {
     display: flex;
     align-items: center;
-    gap: 0.8em;
-    margin-left: 1em;
+    gap: 0.6em;
+    margin-left: 0.65em;
 }
 
 .trust-example__company-comment {
-    width: 25px;
+    width: 20px;
+}
+
+.trust-example__company-count {
+    font-size: 0.8em;
 }
 
 .trust-example__company-button {
     background-color: white;
-    border: black solid 2px;
+    border: black solid 1px;
     border-radius: 0.5em;
-    padding: 0.4em 1.5em;
+    padding: 0.5em 1.2em;
     font-weight: 500;
+    font-size: 0.7em;
     &:hover {
         background-color: black;
         color: white;
@@ -152,166 +168,141 @@
     border-radius: 1em;
     border: solid 1px #0000001A;
     box-shadow: -10px 0 10px #00000005;
-    padding: 1.2em 2em;
+    padding: 1.4em 1.6em;
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 1em;
+    gap: 0.6em;
     width: min-content;
     text-wrap: nowrap;
     position: absolute;
     bottom: 0;
-    left: 0;
+    left: 50%;
+    transform: translateX(-50%);
 }
 
 .trust-example__pro-name {
     font-weight: 500;
-    font-size: 1.1em;
+    font-size: 0.9em;
 }
 
 .trust-example__pro-score {
-    height: 25px;
+    height: 16px;
 }
 
 .trust-example__pro-comment {
-    font-size: 1.1em;
+    font-size: 0.9em;
 }
 
 @media (min-width: 350px) {
-}
-@media (min-width: 576px) { // Smartphones
-}
-@media (min-width: 767px) { // Tablets
-}
-@media (min-width: 992px) { // Laptops
-}
-@media (min-width: 1200px) { // Desktops
-}
-@media (min-width: 1400px) { // Monitors
-    .trust {
-        background-color: #f5f5f5;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-        gap: 3em;
-        padding-bottom: 5em;
-    }
-
-    .trust__titles {
-        display: flex;
-        flex-direction: column;
-        gap: 0.5em;
-        align-items: center;
-        justify-content: center;
-    }
 
     .trust__main-title {
-        font-size: 2em;
-        font-weight: 600;
+        font-size: 1.25em;
     }
 
-    .trust__subtitle {
-        font-size: 1.1em;
-        font-weight: 400;
-    }
-
-    .trust__content {
-        display: flex;
-        gap: 5em;
-        align-items: center;
-        justify-content: center;
-    }
-
-    .trust__items {
-        display: flex;
-        flex-direction: column;
-        gap: 1.4em;
-    }
-
-    .trust__item {
-        display: flex;
-        gap: 1em;
-    }
-
-    .trust-item__icon {
-        width: 1.5em;
-        align-self: flex-start;
-    }
-
-    .trust-item__text {
-        padding-top: 0.15em;
-        font-weight: 300;
-    }
-
-    .trust__item-key {
-        font-weight: 600;
-    }
-
-    .trust__example {
-        position: relative;
+    .trust__subtitle, .trust-item__text {
+        font-size: 0.95em;
     }
 
     .trust-example__company {
-        background-color: white;
-        border-radius: 1.2em;
-        border: solid 1px #0000001A;
-        box-shadow: -10px 0 10px #00000005;
-        padding: 2em;
-        display: flex;
-        flex-direction: column;
-        gap: 2em;
-        padding-bottom: 4em;;
-        margin-bottom: 7.5em;
+        padding: 2em 1em;
+        padding-bottom: 3em;
+        margin-bottom: 6.4em;
+        margin-left: 1.4em;
+    }
+
+    .trust-example__company-name {
+        font-size: 0.95em;
+    }
+
+    .trust-example__company-domain {
+        font-size: 0.85em;
+    }
+
+    .trust-example__company-verified {
+        width: 1.25em;
+    }
+
+    .trust-example__company-trusted {
+        width: 27px;
+    }
+
+    .trust-example__company-interractions {
+        font-size: 0.85em;
+    }
+
+    .trust-example__company-comment {
+        width: 22px;
+    }
+
+    .trust-example__company-count {
+        font-size: 0.85em;
+    }
+
+    .trust-example__company-button {
+        padding: 0.5em 1.4em;
+        font-size: 0.75em;
+        text-wrap: nowrap;
+    }
+
+    .trust-example__pro-review {
+        left: 0;
+        transform: none;
+    }
+}
+@media (min-width: 576px) { // Smartphones
+
+    .trust {
+        gap: 2.4em;
+    }
+
+    .trust__titles {
+        gap: 1em;
+    }
+
+    .trust__main-title {
+        font-size: 1.6em;
+    }
+
+    .trust__subtitle, .trust-item__text, .trust-example__company-name {
+        font-size: 1em;
+    }
+
+    .trust__content {
+        gap: 2.4em;
+    }
+
+    .trust-example__company {
+        padding: 2.2em;
+        padding-bottom: 4em;
+        margin-bottom: 6.2em;
         margin-left: 3em;
     }
 
     .trust-example__company-header {
-        display: flex;
-        align-items: center;
+        gap: 0.8em;
     }
 
     .trust-example__company-logo {
-        background-color: #EE7F2B;
-        width: 65px;
-        height: 65px;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        border-radius: 0.8em;
-        margin-right: 1em;
+        width: 50px;
+        height: 50px;
     }
 
     .trust-example__company-letters {
-        color: white;
-        font-weight: 900;
-        font-size: 2.1em;
+        font-size: 1.4em;
+    }
+
+    .trust-example__company-domain, .trust-example__company-interractions, .trust-example__company-count {
+        font-size: 0.9em;
     }
 
     .trust-example__company-verified {
+        width: 1.4em;
         margin-left: auto;
-        width: 1.8em;
-        &:hover{
-            filter: brightness(0) saturate(100%) invert(54%) sepia(52%) saturate(796%) hue-rotate(341deg) brightness(98%) contrast(89%);
-        }
-    }
-
-    .trust-example__company-score {
-        display: flex;
-        align-items: center;
-        gap: 0.8em;
-        margin-left: 1em;
     }
 
     .trust-example__company-trusted {
         width: 30px;
-    }
-
-    .trust-example__company-comments {
-        display: flex;
-        align-items: center;
-        gap: 0.8em;
-        margin-left: 1em;
     }
 
     .trust-example__company-comment {
@@ -319,44 +310,229 @@
     }
 
     .trust-example__company-button {
-        background-color: white;
-        border: black solid 2px;
-        border-radius: 0.5em;
-        padding: 0.4em 1.5em;
-        font-weight: 500;
-        &:hover {
-            background-color: black;
-            color: white;
-        }
+        font-size: 0.8em;
     }
 
     .trust-example__pro-review {
-        background-color: white;
-        border-radius: 1em;
-        border: solid 1px #0000001A;
-        box-shadow: -10px 0 10px #00000005;
-        padding: 1.2em 2em;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        gap: 1em;
-        width: min-content;
-        text-wrap: nowrap;
-        position: absolute;
-        bottom: 0;
-        left: 0;
+        padding: 1.6em 1.8em;
+        gap: 0.7em;
     }
 
-    .trust-example__pro-name {
-        font-weight: 500;
-        font-size: 1.1em;
+    .trust-example__pro-name, .trust-example__pro-comment {
+        font-size: 0.95em;
+    }
+
+    .trust-example__pro-score {
+        height: 18px;
+    }
+}
+@media (min-width: 767px) { // Tablets
+    .trust {
+        gap: 2.8em;
+        padding-block: 2em 5em;
+    }
+
+    .trust__content {
+        gap: 1em;
+        flex-direction: row;
+    }
+}
+@media (min-width: 992px) { // Laptops
+    .trust {
+        padding-block: 0 6em;
+    }
+
+    .trust__main-title {
+        font-size: 1.95em;
+    }
+
+    .trust__subtitle, .trust-item__text, .trust-example__company-name {
+        font-size: 1.15em;
+    }
+
+    .trust__content {
+        gap: 3em;
+    }
+
+    .trust__items {
+        gap: 1.2em;
+    }
+
+    .trust-item__icon {
+        padding-top: 0.05em;
+        width: 1.4em;
+    }
+
+    .trust-example__company {
+        padding: 2.6em;
+        padding-bottom: 4.4em;
+        margin-bottom: 6.4em;
+        gap: 1.4em;
+    }
+
+    .trust-example__company-header {
+        gap: 1em;
+    }
+
+    .trust-example__company-logo {
+        width: 55px;
+        height: 55px;
+        border-radius: 0.8em;
+    }
+
+    .trust-example__company-letters {
+        font-size: 1.6em;
+    }
+
+    .trust-example__company-score, .trust-example__company-comments {
+        gap: 0.8em;
+        margin-left: 0.8em;
+    }
+
+    .trust-example__company-domain, .trust-example__company-interractions, .trust-example__company-count {
+        font-size: 1em;
+    }
+
+    .trust-example__company-verified {
+        width: 1.6em;
+    }
+
+    .trust-example__company-button {
+        font-size: 0.85em;
+    }
+
+    .trust-example__pro-review {
+        gap: 0.8em;
+    }
+
+    .trust-example__pro-name, .trust-example__pro-comment {
+        font-size: 1em;
+    }
+
+    .trust-example__pro-score {
+        height: 20px;
+    }
+}
+@media (min-width: 1200px) { // Desktops
+
+    .trust {
+        gap: 3.2em;
+        padding-block: 0 7em;
+    }
+
+    .trust__content {
+        gap: 4em;
+    }
+
+    .trust__titles {
+        gap: 1.2em;
+    }
+
+    .trust__main-title {
+        font-size: 2.15em;
+    }
+
+    .trust__items {
+        gap: 1.4em;
+    }
+
+    .trust-example__company {
+        padding-bottom: 4.8em;
+        margin-bottom: 7.2em;
+        margin-left: 3.8em;
+    }
+
+    .trust-example__pro-review {
+        padding: 1.8em 2em;
+        gap: 0.9em;
+    }
+
+    .trust-example__pro-name, .trust-example__pro-comment {
+        font-size: 1.05em;
+    }
+
+}
+@media (min-width: 1400px) { // Monitors
+    .trust {
+        gap: 3.4em;
+    }
+
+    .trust__main-title {
+        font-size: 2.3em;
+    }
+
+    .trust__subtitle, .trust-item__text, .trust-example__company-name {
+        font-size: 1.25em;
+    }
+
+    .trust__content {
+        gap: 5em;
+    }
+
+    .trust__item {
+        gap: 1em;
+    }
+
+    .trust-item__icon {
+        width: 1.7em;
+        padding: 0;
+    }
+
+    .trust-item__text {
+        padding-top: 0.05em;
+        font-size: 1.15em;
+    }
+
+    .trust-example__company {
+        padding: 3em;
+        gap: 1.6em;
+        padding-bottom: 4.8em;
+        margin-bottom: 7.8em;
+        margin-left: 3.2em;
+    }
+
+    .trust-example__company-logo {
+        width: 65px;
+        height: 65px;
+    }
+
+    .trust-example__company-letters {
+        font-size: 2.1em;
+    }
+
+    .trust-example__company-verified {
+        width: 1.8em;
+    }
+
+    .trust-example__company-score, .trust-example__company-comments {
+        margin-left: 1em;
+    }
+
+    .trust-example__company-trusted {
+        width: 32px;
+    }
+
+    .trust-example__company-comment {
+        width: 27px;
+    }
+
+    .trust-example__company-button {
+        border: black solid 2px;
+        padding: 0.45em 1.7em;
+        font-size: 0.9em;
+        margin-left: 0.4em;
+    }
+
+    .trust-example__pro-review {
+        padding: 1.8em 2.6em;
+        gap: 1em;
+    }
+
+    .trust-example__pro-name, .trust-example__pro-comment {
+        font-size: 1.05em;
     }
 
     .trust-example__pro-score {
         height: 25px;
-    }
-
-    .trust-example__pro-comment {
-        font-size: 1.1em;
     }
 }

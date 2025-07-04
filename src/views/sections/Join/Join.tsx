@@ -18,7 +18,7 @@ export default function Join() {
         <section className="join">
             <div className="join__placement">
                 <div className="join__left">
-                    <h1 className='join__main-title'>Rejoindre la<br/>Ruche des Pros</h1>
+                    <h1 className='join__main-title'>Rejoindre la <br/>Ruche des Pros</h1>
                     <p className='join__subtitle'>Pré-inscrivez-vous avant l'ouverture et devenez acteur d'un outil pensé pour votre quotidien.</p>
                     <div className='progression__container'>
                         <div className='progression__bar'>

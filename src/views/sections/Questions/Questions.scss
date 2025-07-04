@@ -441,11 +441,11 @@
 }
 @media (min-width: 1400px) { // Monitors
     .questions {
-        padding-block: 10em;
+        padding-block: 10em 7em;
         gap: 6em;
         &::after {
             width: 80%;
-            bottom: 10em;
+            bottom: 7em;
         }
     }
 

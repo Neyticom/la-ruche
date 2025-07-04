@@ -7,9 +7,9 @@
 
 .join__placement {
     display: flex;
-    margin-inline: 10em;
     align-items: center;
     justify-content: center;
+    flex-direction: column;
 }
 
 .join__left, .join__right {
@@ -17,39 +17,36 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    gap: 0.4em;
-    max-width: 30%;
+    gap: 1em;
+    margin-inline: 1em;
 }
 
 .join__main-title {
-    align-self: start;
-    font-size: 2.2em;
-    margin-bottom: 0.2em;
+    font-size: 1.2em;
+    font-weight: 700;
+    br {
+        display: none;
+    }
 }
 
 .join__subtitle {
-    align-self: start;
-    margin-bottom: 1em;
-    font-size: 1.1em;
+    font-size: 0.9em;
     font-weight: 500;
-    margin-bottom: 2.4em;
 }
-
 
 .progression__container {
     position: relative;
     display: flex;
     justify-content: center;
-    margin-bottom: 1em;
+    align-self: flex-start;
 }
 
 .progression__bar {
     background-color: #f8f8f8;
     box-shadow: inset 0 0 5px #00000033;
-    width: 1.5em;
+    width: 1em;
     height: 12em;
     border-radius: 5em;
-    position: relative;
 }
 
 .progression__mask {
@@ -86,27 +83,26 @@
 
 .progression__list {
     position: absolute;
+    height: 88%;
+    transform: translateX(-0.3em);
     bottom: 0;
-    transform: translateX(50%);
-    right: 50%;
-    height: 85%;
-    margin-bottom: 0.4em;
+    margin-bottom: 0.1em;
 }
 
 .progression__milestone {
     position: absolute;
     bottom: 0;
+    display: flex;
+    align-items: center;
+    gap: 1em
 }
 
 .progression__round, .progression__round--passed {
-    position: absolute;
-    width: 0.9em;
-    height: 0.9em;
+    width: 0.6em;
+    height: 0.6em;
     border-radius: 50%;
-    bottom: 0;
-    transform: translateX(50%);
-    right: 50%;
     background-color: #CACACA;
+    order: 1;
 }
 
 .progression__round--passed {
@@ -115,20 +111,20 @@
 
 .progression__target, .progression__action  {
     text-wrap: nowrap;
-    position: absolute;
-    bottom: 0;
-    transform: translateX(50%) translateY(0.2em);;
-    right: 50%;
 }
 
 .progression__target {
-    padding-right: 10em;
     font-weight: 500;
+    font-size: 0.85em;
+    position: absolute;
+    transform: translateY(-1.15em) translateX(2.25em);
+    order: 3;
 }
 
 .progression__action {
-    padding-left: 15em;
     font-weight: 700;
+    font-size: 0.85em;
+    order: 2;
 }
 
 .join__counter {
@@ -149,13 +145,6 @@
         background-color: white;
         color: rgb(0, 0, 0)
     }
-}
-
-.join__separator {
-    background-color: rgb(0, 0, 0);
-    width: 0.1em;
-    height: 15em;
-    margin-inline: 8em;
 }
 
 .join__follow-hook {
@@ -225,4 +214,245 @@
 
 .join__engagement-text {
     font-weight: 500;
+}
+
+@media (min-width: 350px) {
+}
+@media (min-width: 576px) { // Smartphones
+}
+@media (min-width: 767px) { // Tablets
+}
+@media (min-width: 992px) { // Laptops
+}
+@media (min-width: 1200px) { // Desktops
+}
+@media (min-width: 1400px) { // Monitors
+    .join {
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        padding-block: 5em;
+    }
+
+    .join__placement {
+        display: flex;
+        margin-inline: 10em;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .join__left, .join__right {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 0.4em;
+        max-width: 30%;
+    }
+
+    .join__main-title {
+        align-self: start;
+        font-size: 2.2em;
+        margin-bottom: 0.2em;
+    }
+
+    .join__subtitle {
+        align-self: start;
+        margin-bottom: 1em;
+        font-size: 1.1em;
+        font-weight: 500;
+        margin-bottom: 2.4em;
+    }
+
+
+    .progression__container {
+        position: relative;
+        display: flex;
+        justify-content: center;
+        margin-bottom: 1em;
+    }
+
+    .progression__bar {
+        background-color: #f8f8f8;
+        box-shadow: inset 0 0 5px #00000033;
+        width: 1.5em;
+        height: 12em;
+        border-radius: 5em;
+        position: relative;
+    }
+
+    .progression__mask {
+        overflow: hidden;
+        width: inherit;
+        height: inherit;
+        border-radius: inherit;
+        position: relative;
+    }
+
+    .progression__fill {
+        background-color: orange;
+        width: 1.5em;
+        border-radius: 5em;
+        box-shadow: inset 0 0 5px #00000033;
+        position: absolute;
+        bottom: 0;
+    }
+
+    .progression__item {
+        background-color: #000;
+        border-radius: 50%;
+        display: flex;
+        padding: 0.2em;
+        position: absolute;
+        transform: translateY(0.33em) translateX(-0.33em);
+        z-index: 1;
+    }
+
+    .progression__icon {
+        aspect-ratio: 1 / 1;
+        width: 1.8em;
+    }
+
+    .progression__list {
+        position: absolute;
+        bottom: 0;
+        transform: translateX(50%);
+        right: 50%;
+        height: 85%;
+        margin-bottom: 0.4em;
+    }
+
+    .progression__milestone {
+        position: absolute;
+        bottom: 0;
+    }
+
+    .progression__round, .progression__round--passed {
+        position: absolute;
+        width: 0.9em;
+        height: 0.9em;
+        border-radius: 50%;
+        bottom: 0;
+        transform: translateX(50%);
+        right: 50%;
+        background-color: #CACACA;
+    }
+
+    .progression__round--passed {
+        background-color: #FFFFFF;
+    }
+
+    .progression__target, .progression__action  {
+        text-wrap: nowrap;
+        position: absolute;
+        bottom: 0;
+        transform: translateX(50%) translateY(0.2em);;
+        right: 50%;
+    }
+
+    .progression__target {
+        padding-right: 10em;
+        font-weight: 500;
+    }
+
+    .progression__action {
+        padding-left: 15em;
+        font-weight: 700;
+    }
+
+    .join__counter {
+        font-weight: 600;
+        margin-bottom: 0.6em;
+    }
+
+    .join__button {
+        background-color: black;
+        padding: 0.9em 1.9em;
+        color: white;
+        border-radius: 1em;
+        font-weight: 600;
+        letter-spacing: 0.2px;
+        font-size: 0.95em;
+        border: 2px solid black;
+        &:hover {
+            background-color: white;
+            color: rgb(0, 0, 0)
+        }
+    }
+
+    .join__separator {
+        background-color: rgb(0, 0, 0);
+        width: 0.1em;
+        height: 15em;
+        margin-inline: 8em;
+    }
+
+    .join__follow-hook {
+        font-size: 1.5em;
+        text-transform: uppercase;
+        font-weight: 500;
+        &::before, &::after{
+            content: "";
+            width: 1.2em;
+            height: 0.05em;
+            background-color: black;
+            display: inline-block;
+            vertical-align: middle;
+            margin-inline: 1em;
+        }
+        margin-bottom: 0.4em;
+    }
+
+    .join__follow-title {
+        font-size: 1.8em;
+        font-weight: 600;
+        margin-bottom: 0.2em;
+    }
+
+    .join__follow-text {
+        font-size: 0.9em;
+        margin-bottom: 0.4em;
+        max-width: 70%;
+        text-align: center;
+    }
+
+    .join__follow-email {
+        margin-top: 1em;
+        &::placeholder {
+            color: rgb(92, 92, 92);
+        }
+        border-radius: 0.8em;
+        padding: 0.85em 2em;
+        border: 1px solid darkgray;
+        margin-bottom: 0.4em;
+    }
+
+    .join__follow-button {
+        letter-spacing: 0.2px;
+        background-color: orange;
+        padding: 0.85em 3.4em;
+        color: white;
+        font-weight: 600;
+        font-size: 0.95em;
+        border-radius: 1em;
+        &:hover {
+            background-color: black;
+        }
+    }
+
+    .join__engagements {
+        margin-block: 2em;
+        display: flex;
+        gap: 1.4em;
+    }
+
+    .join__engagements-item {
+        display: flex;
+        gap: 0.6em;
+        align-items: center;
+    }
+
+    .join__engagement-text {
+        font-weight: 500;
+    }
 }
