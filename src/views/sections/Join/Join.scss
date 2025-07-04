@@ -2,7 +2,7 @@
     display: flex;
     align-items: center;
     flex-direction: column;
-    padding-block: 5em;
+    padding-block: 3em;
 }
 
 .join__placement {
@@ -10,6 +10,7 @@
     align-items: center;
     justify-content: center;
     flex-direction: column;
+    gap: 1em;
 }
 
 .join__left, .join__right {
@@ -17,13 +18,13 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    gap: 1em;
-    margin-inline: 1em;
+    margin-inline: 2em;
 }
 
 .join__main-title {
     font-size: 1.2em;
     font-weight: 700;
+    margin-bottom: 0.8em;
     br {
         display: none;
     }
@@ -32,6 +33,7 @@
 .join__subtitle {
     font-size: 0.9em;
     font-weight: 500;
+    margin-bottom: 2.4em;
 }
 
 .progression__container {
@@ -60,7 +62,6 @@
 .progression__fill {
     background-color: orange;
     width: 1.5em;
-    border-radius: 5em;
     box-shadow: inset 0 0 5px #00000033;
     position: absolute;
     bottom: 0;
@@ -72,18 +73,18 @@
     display: flex;
     padding: 0.2em;
     position: absolute;
-    transform: translateY(0.33em) translateX(-0.33em);
+    transform: translateY(0.15em) translateX(-0.28em);
     z-index: 1;
 }
 
 .progression__icon {
     aspect-ratio: 1 / 1;
-    width: 1.8em;
+    width: 1.2em;
 }
 
 .progression__list {
     position: absolute;
-    height: 88%;
+    height: 89%;
     transform: translateX(-0.3em);
     bottom: 0;
     margin-bottom: 0.1em;
@@ -94,7 +95,7 @@
     bottom: 0;
     display: flex;
     align-items: center;
-    gap: 1em
+    gap: 0.8em
 }
 
 .progression__round, .progression__round--passed {
@@ -117,7 +118,7 @@
     font-weight: 500;
     font-size: 0.85em;
     position: absolute;
-    transform: translateY(-1.15em) translateX(2.25em);
+    transform: translateY(-1.2em) translateX(1.74em);
     order: 3;
 }
 
@@ -127,74 +128,78 @@
     order: 2;
 }
 
-.join__counter {
-    font-weight: 600;
-    margin-bottom: 0.6em;
-}
-
 .join__button {
     background-color: black;
     padding: 0.9em 1.9em;
     color: white;
     border-radius: 1em;
-    font-weight: 600;
-    letter-spacing: 0.2px;
-    font-size: 0.95em;
+    font-weight: 500;
+    letter-spacing: 0.4px;
+    font-size: 0.75em;
     border: 2px solid black;
+    margin-top: 2em;
+    margin-bottom: 0.65em;
     &:hover {
         background-color: white;
-        color: rgb(0, 0, 0)
+        color: rgb(0, 0, 0);
     }
 }
 
+.join__counter {
+    font-weight: 500;
+    font-size: 0.8em;
+}
+
 .join__follow-hook {
-    font-size: 1.5em;
+    font-size: 1em;
     text-transform: uppercase;
     font-weight: 500;
+    margin-bottom: 1.6em;
     &::before, &::after{
         content: "";
-        width: 1.2em;
+        width: 0.8em;
         height: 0.05em;
         background-color: black;
         display: inline-block;
         vertical-align: middle;
         margin-inline: 1em;
     }
-    margin-bottom: 0.4em;
 }
 
 .join__follow-title {
-    font-size: 1.8em;
+    font-size: 1.1em;
     font-weight: 600;
-    margin-bottom: 0.2em;
+    margin-bottom: 0.4em;
 }
 
 .join__follow-text {
-    font-size: 0.9em;
+    font-size: 0.8em;
+    text-align: justify;
+    padding-inline: 1em;
     margin-bottom: 0.4em;
-    max-width: 70%;
-    text-align: center;
 }
 
 .join__follow-email {
-    margin-top: 1em;
+    margin-top: 0.8em;
     &::placeholder {
         color: rgb(92, 92, 92);
     }
+    font-size: 0.75em;
     border-radius: 0.8em;
-    padding: 0.85em 2em;
+    padding: 0.85em 1.8em;
+    max-width: 85%;
     border: 1px solid darkgray;
-    margin-bottom: 0.4em;
+    margin-bottom: 1em;
 }
 
 .join__follow-button {
     letter-spacing: 0.2px;
     background-color: orange;
-    padding: 0.85em 3.4em;
+    padding: 0.8em 2.6em;
     color: white;
-    font-weight: 600;
-    font-size: 0.95em;
-    border-radius: 1em;
+    font-weight: 500;
+    font-size: 0.85em;
+    border-radius: 0.8em;
     &:hover {
         background-color: black;
     }
@@ -203,6 +208,7 @@
 .join__engagements {
     margin-block: 2em;
     display: flex;
+    flex-direction: column;
     gap: 1.4em;
 }
 
@@ -210,10 +216,16 @@
     display: flex;
     gap: 0.6em;
     align-items: center;
+    justify-content: center;
 }
 
 .join__engagement-text {
     font-weight: 500;
+    font-size: 0.8em;
+}
+
+.join__engagement-icon {
+    width: 1.2em;
 }
 
 @media (min-width: 350px) {

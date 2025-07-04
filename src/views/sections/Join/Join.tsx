@@ -6,13 +6,13 @@ export default function Join() {
 
     const targets = [
         { target: 0, label: "Début des pré-inscriptions", showTarget: false },
-        { target: 2000, label: "Ouverture des accès aux bêta testeurs", showTarget: true },
+        { target: 2000, label: "Ouverture pour les testeurs", showTarget: true },
         { target: 9000, label: "Lancement de l'application", showTarget: true }
     ];
 
     const maxTarget = Math.max(...targets.map(t => t.target));
 
-    const currentCount = 1200 ;
+    const currentCount = 1000;
 
     return (
         <section className="join">
@@ -25,7 +25,7 @@ export default function Join() {
                             <div className='progression__mask'>
                                 <div className='progression__fill' style={{ height: `${(currentCount / maxTarget) * 100}%`}}></div>
                             </div>
-                            <div className='progression__item' style={{bottom: `${((currentCount / maxTarget * 100 < 40 ? 0.65 : 0.85) * currentCount / maxTarget * 100)}%`}}>
+                            <div className='progression__item' style={{bottom: `${(currentCount / maxTarget * 89)}%`}}>
                                 <img src={Rocket} alt="" className='progression__icon'/>
                             </div>
                         </div>
@@ -39,8 +39,8 @@ export default function Join() {
                             )}
                         </ul>
                     </div>
-                    <p className='join__counter'>{currentCount} / {maxTarget} inscrits</p>
                     <button className='join__button'>Rejoindre la Ruche des Pros</button>
+                    <p className='join__counter'>{currentCount} / {maxTarget} inscrits</p>
                 </div>
 
                 <div className="join__separator" aria-hidden="true"></div>
